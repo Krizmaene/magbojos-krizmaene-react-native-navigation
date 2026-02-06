@@ -32,7 +32,10 @@ export default function CheckoutScreen({ navigation }: Props) {
                 text: "OK",
                 onPress: () => {
                     clearCart();
-                    navigation.navigate("Home");
+                    navigation.reset({
+                        index: 0,
+                        routes: [{ name: "Home"}],
+                    });
                 },
             },
         ]);
